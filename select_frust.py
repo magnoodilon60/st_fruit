@@ -17,7 +17,7 @@ image_data = [
     {"nome": "Caqui", "imagem": "Caqui.jpg"},
     {"nome": "Carambola", "imagem": "Carambola.jpg"},
     {"nome": "Cereja", "imagem": "Cereja.jpg"},
-    {"nome": "Coco ", "imagem": "Coco.jpg"},
+    {"nome": "Fruta coco", "imagem": "Coco.jpg"},
     {"nome": "Damasco", "imagem": "Damasco.jpg"},
     {"nome": "Figo", "imagem": "Figo.jpg"},
     {"nome": "Framboesa", "imagem": "Framboesa.jpg"},
@@ -33,7 +33,7 @@ image_data = [
     {"nome": "Limão", "imagem": "Limão.jpg"},
     {"nome": "Fruta Maçã", "imagem": "Maçã.jpg"},
     {"nome": "Mamão", "imagem": "Mamão.jpg"},
-    {"nome": "Manga", "imagem": "Manga.jpg"},
+    {"nome": "Fruta Manga", "imagem": "Manga.jpg"},
     {"nome": "Maracujá", "imagem": "Maracujá.jpg"},
     {"nome": "Marmelo", "imagem": "Marmelo.jpg"},
     {"nome": "Mexerica", "imagem": "Mexerica.jpg"},
@@ -81,12 +81,30 @@ if st.button('Clique aqui'):
         st.audio("chosen_fruit.mp3", format="audio/mp3")
         os.remove("chosen_fruit.mp3")
         aplle = translated_name[x]  
-    elif translated_name ==  "Fruit grape":   
-        x = slice(6, 11)
+    elif translated_name ==  "grape fruit":   
+        x = slice(5)
         #st.write(translated_name[x])
         grape = translated_name[x]   
     # Vocalização do nome da fruta em inglês
         tts = gTTS(text=grape, lang='en')
+        tts.save("chosen_fruit.mp3")
+        st.audio("chosen_fruit.mp3", format="audio/mp3")
+        os.remove("chosen_fruit.mp3")
+    elif translated_name ==  "Mango fruit":   
+        x = slice(5)
+        #st.write(translated_name[x])
+        mango = translated_name[x]   
+    # Vocalização do nome da fruta em inglês
+        tts = gTTS(text=mango, lang='en')
+        tts.save("chosen_fruit.mp3")
+        st.audio("chosen_fruit.mp3", format="audio/mp3")
+        os.remove("chosen_fruit.mp3")
+    elif translated_name ==  "Coconut fruit":   
+        x = slice(7)
+        #st.write(translated_name[x])
+        coco = translated_name[x]   
+    # Vocalização do nome da fruta em inglês
+        tts = gTTS(text=coco, lang='en')
         tts.save("chosen_fruit.mp3")
         st.audio("chosen_fruit.mp3", format="audio/mp3")
         os.remove("chosen_fruit.mp3")
